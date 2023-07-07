@@ -16,11 +16,11 @@ echo "${wIT}  ┃┃╱╭╋╋━━┃┃╭╮╭┫╭╮┃┃╱╱┃┃
 echo "${GRN}  ┃╰━╯┃┃┃━━┫┃┃╰┫╭╮┃╰╮╭┫┣┫┃┃┣━━┃╰┫╭╮┃╰┫╰┫┃━┫┃   ${NC}"
 echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━┻╯╰┻━━┻━┻╯╰┻━┻━┻━━┻╯   ${NC}"
 echo "${CYN}                                  By lUCIFER   ${NC}"
-
 echo "${YLW}Updating system${NC}"
 echo "${GRN}PRESS 'Y' When ASKED then PRESS ENTER${NC}"
-pkg update && pkg upgrade
+sleep 5
 
+pkg update && pkg upgrade
 clear
 
 echo "${SAF}  ╭╮╱╱╱╱╱╱╱╭━━━╮╱╱╭╮╱╭━━╮╱╱╱╱╱╭╮╱╱╱╭╮╭╮        ${NC}"
@@ -32,15 +32,16 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 if [ ! -d "$PREFIX/opt" ]; then
-  echo -e "${BLUE}Creating /usr/opt Directory${NC}"
+  echo "${BLUE}Creating /usr/opt Directory${NC}"
   mkdir "$PREFIX/opt"
-  echo -e "${GREEN}Directory created${NC}"
+  echo "${GREEN}Directory created${NC}"
 fi
-
+sleep 3
 if [ -d "$PREFIX/opt/lizrat" ]; then
-  echo -e "${CYAN}Removing existing lizrat directory${NC}"
+  echo "${CYAN}Removing existing lizrat directory${NC}"
   rm -rf "$PREFIX/opt/lizrat"
 fi
+sleep 5
 
 clear
 
@@ -55,7 +56,7 @@ echo "${CYN}                                  By lUCIFER   ${NC}"
 echo "${YLW}Moving lizrat directory to /usr/opt${NC}"
 mv -f lizrat "$PREFIX/opt"
 echo "${GRN}lizrat directory Moved${NC}"
-
+sleep 5
 clear
 
 echo "${SAF}  ╭╮╱╱╱╱╱╱╱╭━━━╮╱╱╭╮╱╭━━╮╱╱╱╱╱╭╮╱╱╱╭╮╭╮        ${NC}"
@@ -76,6 +77,7 @@ else
   echo "${CYN}Installing packages${NC}"
   pkg install -y openjdk-17 nodejs
 fi
+sleep 3
 
 clear
 
@@ -87,9 +89,12 @@ echo "${GRN}  ┃╰━╯┃┃┃━━┫┃┃╰┫╭╮┃╰╮╭┫┣
 echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━┻╯╰┻━━┻━┻╯╰┻━┻━┻━━┻╯   ${NC}"
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
-
 echo "${YLW}Installing pm2${NC}"
-npm install pm2 -g
+npm install pm2 -gsleep 5
+
+echo "${YLW}Installation Complete${NC}"
+
+sleep 5
 
 clear
 
@@ -102,8 +107,10 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 echo "${YLW}Installing apktool, zipalign & apksigner${NC}"
-pkg install -y apksigner 
+sleep 5
+
 curl -s https://raw.githubusercontent.com/rendiix/rendiix.github.io/master/install-repo.sh | bash
+pkg install -y apksigner 
 pkg install -y apktool zipalign
 
 clear
@@ -117,6 +124,9 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 echo "${YLW}Installing Lizrat${NC}"
+
+sleep 5
+
 npm install --prefix $PREFIX/opt/lizrat
 
 clear
@@ -130,6 +140,8 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 echo "Creating Symlinks"
+sleep 5
+
 echo "pushd $PREFIX/opt/lizrat && pm2 start index.js && popd" > "$PREFIX/bin/liz"
 echo "pushd $PREFIX/opt/lizrat && pm2 stop index.js && popd" > "$PREFIX/bin/lizx"
 echo "pushd $PREFIX/opt/lizrat && ./builder.sh && popd" > "$PREFIX/bin/lizb"
