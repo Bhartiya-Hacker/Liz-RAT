@@ -17,7 +17,6 @@ This is a Android RAT tool inspired from L3MON. I Developed This tool to add som
 
 # Prerequisite Required in Termux: First copy & Paste Below Command to update your system thats it.
 ```bash
-. Install Termux
 . apt update && apt upgrade    #optional step as script will do this.
 ```
 # Finally! Copy and paste the below command and Grab a Coffee. (:
