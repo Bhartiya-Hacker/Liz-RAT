@@ -105,7 +105,9 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 echo "${YLW}Installing pm2${NC}"
-npm install pm2 -gsleep 5
+npm install pm2 -g
+
+sleep 5
 
 echo "${YLW}Installation Complete${NC}"
 
