@@ -33,7 +33,7 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 if [ ! -d "$PREFIX/opt" ]; then
-  echo "${BLUE}Setting UP LzRAT${NC}"
+  echo "${BLUE}Setting UP LizRAT${NC}"
   mkdir "$PREFIX/opt"
   echo "${GREEN}SETUP Complete${NC}"
 fi
