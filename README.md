@@ -35,6 +35,7 @@ curl -s https://raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/install
 . Type "lizb" anywhere to start building the payload. no need to start the server its totally offline.
 . Type the IP & PORT and wait for the build to complete.
 . after the built, apk can be found at home directory under lizrat_output
+# If "Lizrat_output" folder is not found then plz check if "apktool" is installed properly or not"
 ```
 
 # How To Use: Execute Commands Anywhere in Termux
