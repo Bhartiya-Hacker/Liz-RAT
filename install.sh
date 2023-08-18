@@ -21,7 +21,7 @@ echo "${GRN}PRESS 'Y' When ASKED then PRESS ENTER${NC}"
 sleep 5
 
 pkg update && pkg upgrade
-pkg install wget -y
+pkg install git -y
 clear
 
 echo "${SAF}  ╭╮╱╱╱╱╱╱╱╭━━━╮╱╱╭╮╱╭━━╮╱╱╱╱╱╭╮╱╱╱╭╮╭╮        ${NC}"
