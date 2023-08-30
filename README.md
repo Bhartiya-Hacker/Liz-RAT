@@ -23,7 +23,7 @@ curl -s https://raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/install
 
 # How to setup username & pwd: Same for both Termux & Linux/ubuntu/Debian
 ```bash
-. After the instllation complete first start the server by typing 'liz' & stop it by typing 'lizx', This will create a file 
+. After the instllation complete first start the server by typing 'liz' in TERMUX or by Typing "pm2 start index.js" in Linux & stop it by typing 'lizx' or "pm2 stop index.js", This will create a file 
   called 'maindb.json' in lizrat directory. which is in TERMUX '/usr/opt/lizrat'
 . Now, Go to the lizrat directory and search for the file named "maindb.json".
 . You have to edit this file to set 'username' & 'Password'.
