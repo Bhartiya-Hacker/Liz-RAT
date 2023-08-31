@@ -2,6 +2,12 @@
 This is a Android RAT tool inspired from L3MON. I Developed This tool to add some new features Like Camera Caputure & Recording.
 I am NOT RESPONSIBLE if you use this tool to commit any crime.
 
+<p> I as <a href="https://www.youtube.com/c/BhartiyaHacker">Bhartiya Hacker</a> do not pressurize the LizRAT ool in any way. My moral obligation is to send all types of rights and donations directly to the original crater. I sincerely thank you for allowing me to upload this tool to my GitHub. I have enabled LizRAT to support termux with a few minor changes.</p>
+
+<p>Now users no longer need to sign the LizRAT payload using Apk Editor. If you are a Termux user, you will be able to easily build the payload of LizRAT with the help of this repository, as well as use it in Kali Linux and Ubuntu without any errors. If you are a Kali or Ubuntu user, you need to have Java8 Installed on your machine or follow the rootless installation.</p>
+
+<p>The only way to help me is to visit my <a href="https://youtube.com/c/BhartiyaHacker">YouTube</a> channel and subscribe to my channel, leave your comments on our videos, and follow me on GitHub. Looking forward to your cooperation.</p>
+
 # Featurs:
 ```bash
 . GPS Logging
