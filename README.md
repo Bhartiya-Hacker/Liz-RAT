@@ -46,7 +46,7 @@ curl -s https://raw.githubusercontent.com/Bhartiya-Hacker/Liz-RAT/master/install
 . after the built, apk can be found at home directory under lizrat_output
 . "Lizrat_output" folder is not found then plz check if "apktool" is installed properly or not"
 ```
-# How to use Builder: LINUX (Without Java 8)
+# How to use Builder: LINUX 
 ```bash
 . run 'builder_linux.sh' which is inside lizrat directory to start building the payload. no need to start the server its 
   totally offline.
